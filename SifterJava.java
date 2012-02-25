@@ -1,9 +1,9 @@
-//package com.SifterReader;
+//package com.SifterJava;
 
 /*
- *      SifterReader.java
+ *      SifterJava.java
  *      
- *      Copyright 2012 Mark Mikofski <marko@linuxBox>
+ *      Copyright 2012 Mark Mikofski <bwanamarko@yahoo.com>
  *      
  *      This program is free software; you can redistribute it and/or modify
  *      it under the terms of the GNU General Public License as published by
@@ -29,22 +29,22 @@ import org.json.*;
 
 /** SifterAPI Reader using org.json library **/
 
-public class SifterReader {
+public class SifterJava {
 
     public static void main (String[] args) throws Exception {
         /** Enter your sifter account and access key in the 
 		 ** string fields below */
 		
         // create URL object to SifterAPI
-		String yourAccount = "your-account-name"; // enter your account name
-		String yourDomain = "yourAccount" + ".sifterapp.com";
+		String yourAccount = "your-account"; // enter your account name
+		String yourDomain = yourAccount + ".sifterapp.com";
         URL sifter = new URL("https",yourDomain,"/api/projects");
         
         // open connectino to SifterAPI
         URLConnection sifterConnection = sifter.openConnection();
         
         // add Access Key to header request
-		String yourAccessKey = "your-sifterapi-32char-access-key"; // enter your access key
+		String yourAccessKey = "your-32char-sifterapi-access-key"; // enter your access key
         sifterConnection.setRequestProperty("X-Sifter-Token",
 			yourAccessKey);
 		
