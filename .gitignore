@@ -1,6 +1,6 @@
-.class
+*.class
 ~*
 *~
-.zip
-.rar
+*.zip
+*.rar
 /bin
